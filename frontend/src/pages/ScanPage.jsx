@@ -53,7 +53,7 @@ function ScanPage() {
       formData.append("image", selectedFile);
       formData.append("condition", condition);
 
-      const res = await axios.post("http://localhost:3000/analyze", formData);
+      const res = await axios.post("https://nutb.onrender.com/analyze", formData);
 
       setResult(res.data);
     } catch (err) {
