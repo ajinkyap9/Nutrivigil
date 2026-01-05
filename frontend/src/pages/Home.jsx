@@ -9,6 +9,8 @@ import {
   ShieldCheck,
 } from "lucide-react";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom"; 
+import { useNavigate } from "react-router-dom";
 
 const steps = [
   {
@@ -29,6 +31,8 @@ const steps = [
 ];
 
 const HowItWorks = ({ isLight }) => (
+
+
   <section className="relative z-10 max-w-7xl mx-auto px-6 py-32">
     <motion.div
       initial={{ opacity: 0, y: 30 }}
@@ -72,6 +76,8 @@ const HowItWorks = ({ isLight }) => (
 
 const Home = () => {
   const [currentTheme, setCurrentTheme] = useState("dark");
+
+  const navigate = useNavigate();
 
   useEffect(() => {
     const updateTheme = () => {
@@ -133,7 +139,8 @@ const Home = () => {
           </p>
 
           <div className="flex flex-wrap items-center justify-center lg:justify-start gap-5">
-            <button
+            <button 
+            onClick={() => navigate('/scan')}
               className={`group px-10 py-5 text-lg font-bold rounded-2xl transition-all flex items-center gap-3 shadow-2xl hover:scale-105 active:scale-95 ${
                 isLight
                   ? "bg-indigo-600 text-white shadow-indigo-200"
