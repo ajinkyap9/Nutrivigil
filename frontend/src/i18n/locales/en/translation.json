@@ -75,4 +75,10 @@
     "noCondition": "Please set your health condition first",
     "analysisFailed": "Failed to analyze food"
   }
+,
+  "safety": {
+    "safe": "Safe",
+    "moderate": "Moderate",
+    "unsafe": "Unsafe"
+  }
 }
